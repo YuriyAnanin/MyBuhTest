@@ -3,26 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Проект - Главная</title>
+    <title>MyBuh - Форма</title>
     <meta name="description" content="">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/logo-b.png" type="image/x-icon">
 </head>
 <body class="page">
-    <div class="page__blackout"></div>
-    <header class="title-block__header header">
-        <div class="header__wrap container">
-            <button class="header__menu-btn js_open_menu">
-                <span class="header__menu-btn-line"></span>
-                <span class="header__menu-btn-line"></span>
-                <span class="header__menu-btn-line"></span>
-            </button>
-        </div>
-    </header>
-    <main class="page__index index">
+    <main class="page__form form">
+        <form class="form__wrap container">
+            <div class="form__col-1">
+                <div class="form__row">
+                    <div class="form__card form__card--small">
+                        <p class="form__card-title title title--l2">
+                            Форма собственности
+                        </p>
+                        <ul class="form__radio-list">
+                            <li class="form__radio-item">
+                                <input id="owner_type-1" type="radio" class="form__radio-btn" name="owner_type" checked>
+                                <label for="owner_type-1" class="form__radio-label">ИП</label>
+                            </li>
+                            <li class="form__radio-item">
+                                <input id="owner_type-2" type="radio" class="form__radio-btn" name="owner_type">
+                                <label for="owner_type-2" class="form__radio-label">ТОО</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form__card form__card--small">
+                        <p class="form__card-title title title--l2">
+                            Режим налогообложения
+                        </p>
+                        <ul class="form__radio-list">
+                            <li class="form__radio-item">
+                                <input id="tax_regime-1" type="radio" class="form__radio-btn" name="tax_regime">
+                                <label for="tax_regime-1" class="form__radio-label">УПР</label>
+                            </li>
+                            <li class="form__radio-item">
+                                <input id="tax_regime-2" type="radio" class="form__radio-btn" name="tax_regime" checked>
+                                <label for="tax_regime-2" class="form__radio-label">РН</label>
+                            </li>
+                            <li class="form__radio-item">
+                                <input id="tax_regime-3" type="radio" class="form__radio-btn" name="tax_regime">
+                                <label for="tax_regime-3" class="form__radio-label">ОУР</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__card">
+                        <p class="form__card-title title title--l2">
+                            Выберите вид деятельности
+                        </p>
+                        <ul class="form__radio-list">
+                            <li class="form__radio-item">
+                                <input id="activity_type-1" type="radio" class="form__radio-btn" name="activity_type">
+                                <label for="activity_type-1" class="form__radio-label">Услуга</label>
+                            </li>
+                            <li class="form__radio-item">
+                                <input id="activity_type-2" type="radio" class="form__radio-btn" name="activity_type" checked>
+                                <label for="activity_type-2" class="form__radio-label">Торговля</label>
+                            </li>
+                            <li class="form__radio-item">
+                                <input id="activity_type-3" type="radio" class="form__radio-btn" name="activity_type">
+                                <label for="activity_type-3" class="form__radio-label">Производство</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__card">
+                        <p class="form__card-title title title--l2">
+                            Какие налоги Вы уплачиваете в бюджет?
+                        </p>
+                        <ul class="form__checkbox-list">
+                            <li class="form__checkbox-item">
+                                <div class="form__checkbox-wrap">
+                                    <input type="checkbox" class="form__checkbox" name="tax_types[]" id="tax_type-1" checked>
+                                    <label for="tax_type-1" class="form__checkbox-label">НДС</label>
+                                </div>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <div class="form__checkbox-wrap">
+                                    <input type="checkbox" class="form__checkbox" name="tax_types[]" id="tax_type-2">
+                                    <label for="tax_type-2" class="form__checkbox-label">Акциз</label>
+                                </div>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <div class="form__checkbox-wrap">
+                                    <input type="checkbox" class="form__checkbox" name="tax_types[]" id="tax_type-3">
+                                    <label for="tax_type-3" class="form__checkbox-label">Налог на землю</label>
+                                </div>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <div class="form__checkbox-wrap">
+                                    <input type="checkbox" class="form__checkbox" name="tax_types[]" id="tax_type-4">
+                                    <label for="tax_type-4" class="form__checkbox-label">ВЭД</label>
+                                </div>
+                            </li>
+                            <li class="form__checkbox-item">
+                                <div class="form__checkbox-wrap">
+                                    <input type="checkbox" class="form__checkbox" name="tax_types[]" id="tax_type-5"
+                                        checked>
+                                    <label for="tax_type-5" class="form__checkbox-label">Налог на транспорт</label>
+                                </div>
+                            </li>
+                            
+                            <li class="form__checkbox-item">
+                                <div class="form__checkbox-wrap">
+                                    <input type="checkbox" class="form__checkbox" name="tax_types[]" id="tax_type-6">
+                                    <label for="tax_type-6" class="form__checkbox-label">Налог на имущество</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form__col-2">
+                <div class="form__card form__card--big">
+                    <p class="form__title title title--l1">
+                        Тариф для вас будет стоить
+                    </p>
+                    <ul class="form__radio-list form__radio-list--big">
+                        <li class="form__radio-item form__radio-item--big">
+                            <input id="cost_variant-1" type="radio" class="form__radio-btn" name="cost_variant" checked>
+                            <label for="cost_variant-1" class="form__radio-label">30 000 тенге</label>
+                        </li>
+                        <li class="form__radio-item form__radio-item--big">
+                            <input id="cost_variant-2" type="radio" class="form__radio-btn" name="cost_variant">
+                            <label for="cost_variant-2" class="form__radio-label">300 000 тенге</label>
+                        </li>
+                    </ul>
+                    <button type="submit" class="form__btn btn btn--dark">
+                        Заказать услугу
+                    </button>
+                </div>
+            </div>
+        </form>
     </main>
-    <footer class="page__footer footer">
-    </footer>
-    <script src="js/scripts.js"></script>
 </body>
 </html>

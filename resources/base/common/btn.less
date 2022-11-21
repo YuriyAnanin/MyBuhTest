@@ -8,11 +8,35 @@
     user-select: none;
     white-space: nowrap;
     cursor: pointer;
+    font-size: @fz-4;
+    font-family: @Notosans;
+    -webkit-tap-highlight-color: transparent;
     outline: none;
     width: 100%;
+    user-select: none;
 
     &:hover,
     &:focus {
         outline: none;
+    }
+
+    &--dark {
+        background-color: @dark;
+        color: #fff;
+        border-radius: 5px;
+        height: 50px;
+
+        &:hover,
+        &:focus {
+            background-color: @text;
+        }
+    }
+}
+
+@media(max-width: 550px) {
+    .btn {
+        &--dark {
+            height: 46px;
+        }
     }
 }
