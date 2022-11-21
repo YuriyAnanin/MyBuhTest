@@ -1,0 +1,53 @@
+.page {
+    position: relative;
+    min-width: 320px;
+    font-family: @Font;
+    font-size: 17px;
+    line-height: 1.2;
+    overflow-x: hidden;
+    color: #000;
+
+    &__blackout {
+        position: fixed;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .4);
+        transition: opacity .3s;
+        opacity: 0;
+
+        &.is-active {
+            width: 100%;
+            z-index: 3;
+            opacity: 1;
+        }
+    }
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 40px 0 40px;
+    margin: 0 auto;
+}
+
+@media all and(max-width: 1050px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@media all and(max-width: @1023) {
+    .container {
+        // padding: 0 20px;
+    }
+}
+
+
+@media all and(max-width: @550) {
+    .container {
+        padding: 0 16px;
+    }
+}
